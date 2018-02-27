@@ -7,7 +7,7 @@
     <ProjectGuid>{1DD33834-2293-46F5-99D3-091221310B49}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>CSScriptLoadFile</RootNamespace>
-    <AssemblyName>CSScriptLoadFile</AssemblyName>
+    <AssemblyName>LoadFile</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
