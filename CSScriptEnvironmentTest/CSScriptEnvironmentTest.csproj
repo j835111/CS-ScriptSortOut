@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0EDB5825-AB97-4208-8001-937131288D34}</ProjectGuid>
+    <ProjectGuid>{2118C95E-DFA6-4A56-8019-D42728B6EC20}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CSScriptOriginal</RootNamespace>
-    <AssemblyName>CSScriptOriginal</AssemblyName>
+    <RootNamespace>CSScriptEnvironmentTest</RootNamespace>
+    <AssemblyName>CSScriptEnvironmentTest</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
