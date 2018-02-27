@@ -1,4 +1,6 @@
 ﻿using CSScriptLibrary;
+using System;
+using System.Diagnostics;
 
 namespace CompileFile
 {
@@ -6,13 +8,24 @@ namespace CompileFile
     {
         static void Main(string[] args)
         {
+            Stopwatch stopwatch = new Stopwatch();
             string[] par = { "System" };
             //Compile
-            CSScript.CompileFile("Script.cs", @"C:\Users\j8351\Desktop\assembly", false, par);
+
+            stopwatch.Start();
+            CSScript.CompileFile("Script.cs", @"assembly", false, par);
+            Console.WriteLine("Compile time: " + stopwatch.Elapsed);
 
             //Loaded Assembly
-            AsmHelper asmHelper = new AsmHelper(@"C:\Users\j8351\Desktop\assembly", "test", false);
+            stopwatch.Restart();
+            AsmHelper asmHelper = new AsmHelper(@"assembly", "test", false);
+            Console.WriteLine("Assembly loaded time: " + stopwatch.Elapsed);
+
+            stopwatch.Restart();
             asmHelper.Invoke("*.Test");
+            Console.WriteLine("Function called time: " + stopwatch.Elapsed);
+
+            Console.ReadLine();
         }
     }
 }
