@@ -1,7 +1,7 @@
 ﻿using CSScriptLibrary;
 using System;
 
-namespace CS_ScriptSortOut
+namespace CSScriptLoadFile
 {
     class Program
     {

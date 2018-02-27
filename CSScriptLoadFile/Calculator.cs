@@ -1,8 +1,8 @@
-﻿namespace CS_ScriptSortOut
+﻿namespace CSScriptLoadFile
 {
     class Calculator
     {
-        public static int Add(int a,int b)
+        public static int Add(int a, int b)
         {
             return a + b;
         }
