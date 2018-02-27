@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1DD33834-2293-46F5-99D3-091221310B49}</ProjectGuid>
+    <ProjectGuid>{5F6F3465-6C19-4E8D-89CE-42379EF43667}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CSScriptLoadFile</RootNamespace>
-    <AssemblyName>LoadFile</AssemblyName>
+    <RootNamespace>CompileFile</RootNamespace>
+    <AssemblyName>CompileFile</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -36,15 +36,11 @@
       <HintPath>..\packages\CS-Script.bin.3.27.2.0\lib\net46\CSScriptLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Script.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -56,7 +52,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "$(ProjectDir)Script.cs" "$(TargetDir)Script.cs"
-copy "$(ProjectDir)Calculator.cs" "$(TargetDir)Calculator.cs"</PostBuildEvent>
+    <PostBuildEvent>copy "$(ProjectDir)Script.cs" "$(TargetDir)Script.cs"</PostBuildEvent>
   </PropertyGroup>
 </Project>
