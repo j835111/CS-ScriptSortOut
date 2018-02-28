@@ -46,8 +46,8 @@ namespace CompileFile
             AsmHelper asmHelper1 = new AsmHelper(@"assembly1", "test", false);
             AsmHelper asmHelper2 = new AsmHelper(@"assembly2", "test", false);
 
-            asmHelper1.Invoke("*.Test1");
-            asmHelper2.Invoke("*.Test2");
+            //asmHelper1.Invoke("*.Test1");
+            //asmHelper2.Invoke("*.Test2");
         }
 
         public static String[] Par { get; set; } = {  };
