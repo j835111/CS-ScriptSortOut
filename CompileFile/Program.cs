@@ -8,12 +8,21 @@ namespace CompileFile
     {
         static void Main(string[] args)
         {
+            CompileMultipleScript();
+
+            Console.ReadLine();
+        }
+
+        /// <summary>
+        /// Meaure time of compiling and loading
+        /// </summary>
+        void TimeMeaure()
+        {
             Stopwatch stopwatch = new Stopwatch();
-            string[] par = { "System" };
             //Compile
 
             stopwatch.Start();
-            CSScript.CompileFile("Script.cs", @"assembly", false, par);
+            CSScript.CompileFile("Script.cs", @"assembly", false, Par);
             Console.WriteLine("Compile time: " + stopwatch.Elapsed);
 
             //Loaded Assembly
@@ -24,8 +33,24 @@ namespace CompileFile
             stopwatch.Restart();
             asmHelper.Invoke("*.Test");
             Console.WriteLine("Function called time: " + stopwatch.Elapsed);
-
-            Console.ReadLine();
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        static void CompileMultipleScript()
+        {
+            CSScript.CompileFile(@"..\..\Script1.cs", @"assembly1", false, Par);
+            CSScript.CompileFile(@"..\..\Script2.cs", @"assembly2", false, Par);
+
+            AsmHelper asmHelper1 = new AsmHelper(@"assembly1", "test", false);
+            AsmHelper asmHelper2 = new AsmHelper(@"assembly2", "test", false);
+
+            asmHelper1.Invoke("*.Test1");
+            asmHelper2.Invoke("*.Test2");
+        }
+
+        public static String[] Par { get; set; } = {  };
+
     }
 }
