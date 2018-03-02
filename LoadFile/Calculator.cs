@@ -1,4 +1,4 @@
-﻿namespace CSScriptLoadFile
+﻿namespace LoadFile
 {
     class Calculator
     {

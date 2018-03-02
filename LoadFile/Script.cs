@@ -1,8 +1,8 @@
-﻿//css_imp Calculator, rename_namespace(CSScriptLoadFile, test);
+﻿//css_imp Calculator, rename_namespace(LoadFile, test);
 
 using System;
 
-namespace CSScriptLoadFile
+namespace LoadFile
 {
     class Script
     {

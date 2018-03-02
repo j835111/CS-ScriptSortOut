@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CSScriptEnvironmentTest
+namespace EnvironmentTest
 {
     class Program
     {

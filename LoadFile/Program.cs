@@ -1,7 +1,7 @@
 ﻿using CSScriptLibrary;
 using System;
 
-namespace CSScriptLoadFile
+namespace LoadFile
 {
     class Program
     {

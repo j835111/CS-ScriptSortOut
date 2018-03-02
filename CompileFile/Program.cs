@@ -1,6 +1,7 @@
 ﻿using CSScriptLibrary;
 using System;
 using System.Diagnostics;
+using System.IO;
 
 namespace CompileFile
 {
@@ -9,6 +10,8 @@ namespace CompileFile
         static void Main(string[] args)
         {
             CompileMultipleScript();
+
+            //FindCurrentDirectory();
 
             Console.ReadLine();
         }
@@ -46,8 +49,17 @@ namespace CompileFile
             AsmHelper asmHelper1 = new AsmHelper(@"assembly1", "test", false);
             AsmHelper asmHelper2 = new AsmHelper(@"assembly2", "test", false);
 
-            //asmHelper1.Invoke("*.Test1");
+            asmHelper1.Invoke("CompileFile.Script1.Test1");
             //asmHelper2.Invoke("*.Test2");
+        }
+
+        static void FindCurrentDirectory()
+        {
+            Console.WriteLine(Environment.CurrentDirectory);
+            Console.WriteLine(Process.GetCurrentProcess().MainModule.FileName);
+            Console.WriteLine(AppDomain.CurrentDomain.BaseDirectory);
+            Console.WriteLine(Directory.GetCurrentDirectory());
+            //Console.WriteLine(this.GetType().Assembly.Location);
         }
 
         public static String[] Par { get; set; } = {  };
